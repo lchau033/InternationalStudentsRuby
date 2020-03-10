@@ -1,0 +1,61 @@
+<% stylesheet 'page_specific/content' %>
+<!-- Service Page SCRAPPED -->
+<div class="my_container">
+  <div class="page-header colorflow">
+    <div id="contentTitle">
+      <h1 align="center"><%=t '.content_title' %></h1>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="row" >
+      <div class="col-lg-4 col-md-4 col-xs-4 colorfill">
+        <div id="Prepare">
+          <h2><%=t '.prepare.title' %></h2>
+          <p><a href="http://www.cic.gc.ca/ctc-vac/getting-started.asp" target="_blank"><%=t '.prepare.eligibility' %></a></p>
+          <br>
+          <a href="http://www.educanada.ca/explore-explorer/canada/index.aspx?lang=eng" target="_blank"><%=t '.prepare.before_leaving' %> </a></p>
+          <h3>Admission</h3>
+          <p ><a href="http://w03.educanada.ca/index.aspx?action=programsearch-rechercheprogramme&lang=eng" target="_blank"><%=t '.prepare.school' %></a></p>
+          <br>
+          <h3>Visa</h3>
+          <p><a href="http://www.cic.gc.ca/english/information/offices/vac.asp" target="_blank"><%=t '.prepare.visa' %></a> </p>
+          <p></p>
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4  col-xs-4 colorfill verticalLine " >
+        <div  id="Adapt">
+          <h2 ><%=t '.adapt.title' %></h2>
+          <p><a href="http://www.cra-arc.gc.ca/newcomers/" target="_blank"><%=t '.adapt.taxes' %></a></p>
+          <br>
+          <p><a href="http://www.cic.gc.ca/english/study/work.asp" target="_blank"><%=t '.adapt.work' %></a> </p>
+          <br>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4  col-xs-4 colorfill verticalLine " >
+        <div  id="Settling">
+          <h2 ><%=t '.settling.title' %></h2>
+          <p><a href="http://www.cic.gc.ca/english/newcomers/services/index.asp" target="_blank"><%=t '.settling.services' %></a></p>
+          <br>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div id="bottomtxt">
+        <p><%=t '.help_one'%></p>
+        <br>
+          <div class="price-footer text-center">
+            <a class="btn red-standard-btn" href="mailto:navigatingcanada@gmail.com"><%=t '.contact_help' %></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div data-role="page">
+  <%= javascript_include_tag('update_chat.js') %>
+</div>
+
+

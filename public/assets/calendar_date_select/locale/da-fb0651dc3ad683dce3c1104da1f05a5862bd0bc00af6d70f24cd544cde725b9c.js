@@ -1,0 +1,1 @@
+Date.weekdays=$w("Ma Ti On To Fr L\xf8 S\xf8"),Date.months=$w("Januar Februar Marts April Maj Juni Juli August September Oktober November December"),Date.first_day_of_week=1,_translations={OK:"V\xe6lg",Now:"Nu",Today:"I dag",Clear:"Slet"};

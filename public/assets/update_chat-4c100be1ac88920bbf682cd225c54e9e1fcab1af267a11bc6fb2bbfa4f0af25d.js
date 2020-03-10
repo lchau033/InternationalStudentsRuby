@@ -1,0 +1,1 @@
+$(window).load(function(){var n=gon.open;n&&document.getElementById("bubble").click()});

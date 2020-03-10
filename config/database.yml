@@ -1,0 +1,45 @@
+#development:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: d1kcd29pp0uc4n
+#  pool: 5
+#  username: cfvuiptufnkaox
+#  password: 2d9e1c46b284648b2e72d9e4e8f37cea0d14e4eb99c8bba7fb1ad5f69a96897c
+#  host: ec2-54-243-214-198.compute-1.amazonaws.com
+#  port: 5432
+
+#development: &development
+#   adapter: postgresql
+#   database: Your_database_name
+#   username: user_name
+#   password: password
+#   host:     localhost
+#
+# test:
+#   <<: *development
+#   database: test_database_name
+#
+# production:
+#   <<: *development
+#   database: production_db_name
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: postgres
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: postgres
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+
+

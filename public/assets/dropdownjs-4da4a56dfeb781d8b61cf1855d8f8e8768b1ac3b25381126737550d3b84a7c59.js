@@ -1,0 +1,1 @@
+$(function(){function e(){$(".response").each(function(e,t){var n=$(t);n.removeClass("fixed-height");var i=n.innerHeight();n.attr("data-height",i).addClass("fixed-height")})}$("input[name=question]").on("change",function(){$("p.response").removeAttr("style");var e=$(this).next().next();e.height(e.attr("data-height"))}),e()});

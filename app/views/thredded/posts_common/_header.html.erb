@@ -1,0 +1,20 @@
+<% stylesheet 'page_specific/avatar.css' %>
+
+<%# @param post [Thredded::PostView] %>
+<header>
+  <% if post.user.image_url %>
+      <%= image_tag post.user.image_url, class: 'thredded--post--avatar'  if post.user %>
+  <% else %>
+      <div class="thredded--post--avatar avatar avatar-circle avatar-small">
+        <span class="initials">
+          <%= post.user.name.chr.upcase %>
+        </span>
+      </div>
+  <% end %>
+
+  <h2 class="thredded--post--user"><%= user_link post.user %></h2>
+  <a href="<%= post.permalink_path %>" rel="nofollow" class="thredded--link thredded--post--created-at">
+    <%= time_ago post.created_at %>
+  </a>
+  <h2 class="thredded--post--count"></h2>
+</header>

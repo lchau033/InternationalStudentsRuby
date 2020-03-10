@@ -1,0 +1,1 @@
+var ready=function(){var o=$(" .chatboxcontent");void 0!=o[0]&&o.scrollTop(o[0].scrollHeight)};$(document).ready(ready),$(document).on("turbolinks:load",ready);

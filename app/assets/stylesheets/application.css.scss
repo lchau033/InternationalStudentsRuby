@@ -1,0 +1,34 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require_self
+ *= require imported/bootstrap.min
+ *= require imported/bootstrap-theme.min
+ *= require imported/font-awesome.min
+ *= require imported/animate.min
+ *= require imported/fullcalendar
+ *= require imported/css-app
+ *= require imported/css-index
+ *= require imported/css-intro
+ *= require imported/imagehover.min
+ *= require imported/owl.carousel
+ *= require imported/owl.theme
+ *= require imported/toastr.min
+ *= require imported/toastr-mod.css
+ *= require imported/style
+ *= require page_specific/chat.css
+ *= require page_specific/forum.css
+ *= require sweetalert2
+ *= require global
+ */
+
+@import "thredded";
+@import "bootstrap";

@@ -1,0 +1,1 @@
+Date.weekdays=$w("h. k. sze. cs. p. szo. v."),Date.months=$w("janu\xe1r febru\xe1r m\xe1rcius \xe1prilis m\xe1jus j\xfanius j\xfalius augusztus szeptember okt\xf3ber november december"),Date.first_day_of_week=1,_translations={OK:"OK",Now:"Most",Today:"Ma",Clear:"Bez\xe1r\xe1s"};

@@ -1,0 +1,11 @@
+development:
+  server: "http://localhost:9292/faye"
+  secret_token: "secret"
+test:
+  server: "http://localhost:9292/faye"
+  secret_token: "secret"
+production:
+  server: "https://faye-navigating-canada.herokuapp.com/faye"
+  secret_token: "0187cd033d28cd40b12ef28ac7faf00bf8b2796560684784b860887eb17af55d"
+  signature_expiration: 3600 # one hour
+

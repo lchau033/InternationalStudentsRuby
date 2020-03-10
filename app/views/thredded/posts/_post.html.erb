@@ -1,0 +1,36 @@
+<% post, content = post_and_content if local_assigns.key?(:post_and_content) %>
+<%= content_tag :article, id: dom_id(post), class: "thredded--post thredded--#{post.read_state}--post" do %><%= render 'thredded/posts_common/actions', post: post, actions: local_assigns[:actions] %>
+  <%= render 'thredded/posts_common/header', post: post %>
+    <div class="votes">
+      <%= form_for post.upvotes.build, url:main_app.post_upvotes_path(post), remote:true do |f| %>
+          <% idString = dom_id(post) %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :post_id, value: idString.each_char{ |c| idString.delete!(c) if c.ord<48 or c.ord>57 } %>
+          <%= button_tag(type: 'submit', class: "upvote-submit") do %>
+              <i class="upvote-icon fa fa-caret-up fa-2x<% if post.current_user_upvoted?(current_user.id) %> upvoted<% end %>" aria-hidden="true"></i>
+          <% end %>
+      <% end %>
+      <span class="score">
+        <%= post.score %>
+      </span>
+      <%= form_for post.downvotes.build, url:main_app.post_downvotes_path(post), remote:true do |f| %>
+          <% idString = dom_id(post) %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <%= f.hidden_field :post_id, value: idString.each_char{ |c| idString.delete!(c) if c.ord<48 or c.ord>57 } %>
+          <%= button_tag(type: 'submit', class: "downvote-submit") do %>
+              <i class="downvote-icon fa fa-caret-down fa-2x<% if post.current_user_downvoted?(current_user.id) %> downvoted<% end %>" aria-hidden="true"></i>
+          <% end %>
+      <% end %>
+    </div>
+    <%= content || render('thredded/posts/content', post: post) %>
+
+    <% if post.pending_moderation? && !Thredded.content_visible_while_pending_moderation %>
+    <p class="thredded--alert thredded--alert-warning"><%= t 'thredded.posts.pending_moderation_notice' %></p>
+  <% elsif post.blocked? && post.can_moderate? %>
+    <p class="thredded--alert thredded--alert-danger">
+      <%= render 'thredded/shared/content_moderation_blocked_state', moderation_record: post.last_moderation_record %>
+    </p>
+  <% end %>
+<% end %>
+
+

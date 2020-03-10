@@ -1,0 +1,25 @@
+/*
+ *= require imported/bootstrap.css
+ *= require imported/css-app
+ *= require imported/toastr.min
+ *= require imported/toastr-mod.css
+ *= require imported/style
+ *= require global
+ *= require sweetalert2
+ *= require_self
+ */
+
+html {
+    font-size: inherit;
+    font-family: 'Effra';
+    font-weight: normal;
+}
+
+td, a {
+    font-family: 'Effra';
+    font-weight: normal;
+}
+
+.swal2-modal .swal2-styled + .swal2-styled {
+     margin-top: 0px;
+}

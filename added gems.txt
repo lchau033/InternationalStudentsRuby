@@ -1,0 +1,11 @@
+gem 'sorcery'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem 'validates_email_format_of'
+gem 'rails-i18n', '~> 4.0.0'
+gem 'localeapp'
+
+gem 'private_pub'
+gem 'thin'
+gem "administrate"
+gem 'faye'
+gem 'gon'

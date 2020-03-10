@@ -1,0 +1,19 @@
+<div class="page-header">
+  <div id="profileTitle">
+    <h1 class="text-center"><%= t(".title") %></h1>
+  </div>
+</div>
+
+<div class="signup">
+  <%= form_tag reset_passwords_path, method: :post do %>
+
+      <div class="form-group col-md-6 col-sm-offset-3">
+        <%= label_tag t(".email") %>
+        <%= email_field_tag :email, nil, class: 'form-control', required: true %>
+      </div>
+
+      <div class="form-group form-button col-md-2 col-md-offset-5" style="text-align: center;">
+        <%= submit_tag t(".send_reset") , class: 'btn red-standard-btn', style: 'margin:40px 0;' %>
+      </div>
+  <% end %>
+</div>

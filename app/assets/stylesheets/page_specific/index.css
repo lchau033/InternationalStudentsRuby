@@ -1,0 +1,208 @@
+.titleNavigatingToCanada {
+    color: #f6f6f6;
+}
+
+.title-line {
+    margin-bottom: 60px;
+}
+
+.title-container {
+    margin: 100px 0 80px;
+}
+
+.text-border {
+    margin: 100px 0 30px 0;
+}
+.banner, .bg-color {
+    text-align:center;
+    height: 92vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .banner, .bg-color {
+        height: auto;
+    }
+}
+
+.banner h1 {
+    font-family: 'Effra';
+    font-size: 35px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.banner h1 .welcome {
+    font-size: 28px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin: 0 10px 0 10px;
+}
+.banner h1 .canada {
+    font-size: 56px;
+    font-weight: normal;
+}
+.banner h1 .international {
+    font-size: 28px;
+    font-family: 'Effra';
+    font-weight: normal;
+    color: rgba(48, 46, 111, 0.72);
+    text-align: center;
+    background-color: white;
+    letter-spacing: 3px;
+    line-height: 30px
+}
+
+.welcome-square {
+    display:flex;
+}
+
+.square {
+    border: 2px solid white;
+    left:0;
+    height: 22px;
+    display: inline-block;
+    flex: 0.5;
+    margin-top: 12px;
+}
+
+.title-description {
+    color: white;
+    text-align: left;
+}
+
+.signin-header {
+    margin: 100px 0 0;
+    padding: 0 20px;
+}
+
+.signup-header {
+    margin: 25px 0 0;
+    padding: 0 20px;
+}
+
+.signup-header h2 {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    margin: 0px;
+    color: #5a5965;
+}
+
+.signin-header, .signup-header {
+    background-color: #FFF;
+    border-radius: 0;
+    max-width: 80%;
+}
+
+.signin-header > form {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .signup-header, .signin-header {
+        width: 100%;
+        margin: 40px auto;
+    }
+}
+
+.password-field {
+    display: inline-block;
+    width: 62%;
+    margin-right: 5%;
+}
+
+.btn:hover .btn:focus {
+    color: #ffffff;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-wrapper {
+    margin: 0 auto;
+}
+
+.form-button {
+    padding-top: 25px;
+}
+
+.links {
+    font-weight: normal;
+}
+
+.links > a {
+    color: #5a5965;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 5px;
+    min-height: 35px;
+    min-width: 60px;
+    width: 30%;
+    vertical-align: top;
+}
+
+.signup-group {
+    display: block;
+    text-align: right;
+    padding-bottom: 15px;
+}
+
+.signup-btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 5px;
+    min-height: 35px;
+    min-width: 100px;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.btn-twitter, .btn-facebook {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-twitter {
+    background-color: #55acee;
+    margin: 10px;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    margin: 10px;
+}
+
+.btn-twitter > a, .btn-facebook > a {
+    color: white;
+    text-decoration: none !important;
+
+}
+
+.btn-twitter > a:hover, .btn-facebook > a:hover {
+    color: white;
+}
+
+.new_user {
+    min-height: 50px;
+}

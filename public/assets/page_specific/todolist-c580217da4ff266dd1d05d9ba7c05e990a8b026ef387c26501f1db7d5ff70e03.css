@@ -1,0 +1,158 @@
+input {
+    display:none;
+}
+
+input[type=checkbox]:checked+.sqr {
+    background-position:-2px -1px;
+    border-radius:50%;
+    border-color:#27AE60;
+}
+
+input[type=checkbox]:checked+.sqr+.time+label {
+    text-decoration: line-through;
+}
+
+input[type=checkbox]:checked+.sqr+.time {
+    color: #D1D1D1;
+}
+
+.unslct {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+.cnt-blk {
+    float:none;
+    margin: 50px auto;
+    display:table;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.ful {
+    float: left;width: 100%;
+}
+
+.half {
+    float: left;width: 50%;
+}
+
+.txt-cnt {
+    text-align:center;
+}
+.main-width {
+    min-width: 1000px;
+    max-width: 600px;
+    width:100%;
+    overflow: hidden;
+    border-radius:10px;
+    border:1px solid #dfdfdf;
+}
+
+.distb {
+    display:table;
+}
+
+.tabs {
+    padding:14px 0px;
+    background-color:#545;
+    text-transform:capitalize;
+    color:#fff;
+    font-style:2em;
+    display:table-cell;
+    cursor: pointer;
+}
+
+.home {
+    background-color:#FD6B66;
+    border-right:1px solid #DA4843;
+}
+
+.office {
+    background-color:#1abc9c;
+    border-left:1px solid #2ACCAC;}
+
+.tab-wrp {
+    background-color:#efefef;
+    background-image:url('../assets/bg.jpg');}
+
+.wrp-main {
+    margin:10px 0;}
+
+.task {
+    border-bottom:1px solid #a1201d;
+    padding:5px 0px;color:#7f8c8d;
+}
+.task:hover > .sqr {
+    background-position:-2px -37px;
+}
+
+.none {
+    border-bottom-color:transparent;
+}
+
+.sqr {
+    background-image:url('http://goo.gl/3tza1X');
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:30px;width:30px;
+    border:3px solid #251f3e;
+    margin:0px 20px 0px 15px;
+    border-radius: 5px;
+    background-position:-2px -70px;
+}
+
+label {
+    display: block;
+    height: 70px;
+    line-height: 36px;
+    cursor:pointer;
+    position: relative;
+}
+
+.rapr {
+    float: right;
+}
+
+.time {
+    height: 36px;
+    line-height: 36px;
+    width: 20%;
+    margin-right: 14px;
+    padding: 0px 5px;
+    color: #16834A;
+    border-radius: 5px;
+}
+
+.safe {
+    background: none repeat scroll 0% 0% ;
+    font-size: 10px;
+}
+
+.pink {
+    color: #C500BF;
+}
+
+.red {
+    color:#D14233;
+}
+
+.had {
+    background: #a1201d;
+    text-align:center;
+    font-size:25px;
+    font-weight:normal;
+    padding:10px;
+    color:#F9F9F9;
+    margin-bottom:1px
+s}

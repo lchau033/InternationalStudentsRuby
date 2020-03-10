@@ -1,0 +1,11 @@
+<!--Facebook like chat index.html.erb-->
+<!--CREDITS: https://www.linkedin.com/pulse/facebook-like-chat-application-using-ruby-rails-kanhaiya-kumar?articleId=8194060515700978927-->
+
+<% if !$conversation.nil? %>
+<div class="hidden-xs transparent">
+  <div class="speech-bubble" align="right" id='bubble2'>
+    <%= link_to t(".start_chat"), "#", class: "btn-chat start-conversation", id:'bubble',
+                 "data-cid" => $conversation.id , "data-admin" => false %>
+  </div>
+</div>
+<% end %>

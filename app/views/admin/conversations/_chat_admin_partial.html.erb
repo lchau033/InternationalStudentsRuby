@@ -1,0 +1,29 @@
+<!--Facebook like chat index.html.erb-->
+<!--CREDITS: https://www.linkedin.com/pulse/facebook-like-chat-application-using-ruby-rails-kanhaiya-kumar?articleId=8194060515700978927-->
+
+<!-- This is basically the same as what was done by the credits except I changed
+<!--it a little a little bit so it wouldn't create a chat box for the admin -->
+<!--but send them to a page that had the conversation on it-->
+<div>
+  <div>
+    <!-- Default panel contents -->
+    <div class="panel-heading my_panel">Registered Users</div>
+
+    <!-- Table -->
+    <table class="table my_table">
+      <tbody>
+      <% @conversations.each_with_index do |conversation, index| %>
+          <tr>
+            <td><%= interlocutor(conversation).name %></td>
+            <td>
+              <%= link_to "Send Message", "/admin/conversations/"+conversation.id.to_s, class: "btn my_btn",
+                          "data-cid" => conversation.id, "data-admin" => true  %>
+            </td>
+            <td><%=  conversation.messages.sort_by(&:created_at).last.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+  </div>
+</div>

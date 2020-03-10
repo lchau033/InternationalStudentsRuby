@@ -1,0 +1,54 @@
+<!-- NAVIGATION BAR-->
+<div id="menu">
+  <nav class="navbar-wrapper navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <span class="navbar-brand site-name"><%= image_tag("logoNavCanWhite.png", :alt => "logo")%></span>
+
+
+      </div>
+      <!-- Conditional Navigation depending on user status -->
+      <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
+        <ul class="nav navbar-nav">
+          <!-- Registered user -->
+          <% if current_user %>
+              <li><%= link_to t('.profile'), main_app.profile_path %></li>
+              <li><%= link_to t('.question_board'), main_app.forum_path %></li>
+              <li><%= link_to t('.featured_stories'), main_app.stories_path %></li>
+              <!-- Admin user -->
+              <% if current_user.admin? %>
+                  <li><%= link_to 'Admin Page', main_app.admin_users_path %></li>
+              <% end %>
+              <li><%= link_to t('.logout'), main_app.log_out_path, method: :delete %></li>
+          <% end %>
+          <!-- Not logged in  -->
+          <% if current_user.nil? %>
+              <% if current_page?('/reset_passwords/new') %>
+                  <li><%= link_to t('.Home'), main_app.log_in_path %></li>
+              <% end %>
+              <!-- Single Language button -->
+
+          <% end %>
+          <li>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle btn-language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%=t '.language' %> <%= I18n.locale.upcase %> <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu language-menu">
+                <li class="btn-fr"><%= link_to "FR", { :locale=>'fr' }  %></li>
+                <li role="separator" class="divider"></li>
+                <li class="btn-en"><%= link_to "EN", { :locale=>'en' }  %></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

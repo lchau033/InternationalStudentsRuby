@@ -1,0 +1,1 @@
+$(function(){var e={space:32,enter:13},t=function(t){"click"!=t.type&&t.keyCode!=e.space&&t.keyCode!=e.enter||t.target.href||(window.location=$(t.target).closest("tr").data("url"))};$("table").on("click",".table__row",t),$("table").on("keydown",".table__row",t)});

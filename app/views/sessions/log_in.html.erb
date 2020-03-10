@@ -1,0 +1,80 @@
+<% stylesheet 'page_specific/index' %>
+
+<!-- WELCOME TO NAVIGATING CANADA Section -->
+<!-- full screen banner with car/map picture -->
+<div class="banner">
+  <div class="bg-color">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="title-container">
+            <h1 class="wow fadeInLeft titleNavigatingToCanada">
+              <div class="welcome-square">
+                <div class="square"></div>
+                <span class="welcome"><%=t '.welcome_to' %></span>
+                <div class="square"></div>
+              </div>
+              <span class="canada"><%= t '.navigating_canada' %></span>
+              <div class="international"><%=t '.for_international_students' %></div>
+            </h1>
+          </div>
+          <p class="title-description"><%= t '.banner_message' %></p>
+        </div>
+        <!-- LOGIN -->
+        <div class="col-md-5 col-md-offset-1">
+          <div class="signin-header wow fadeInUp">
+            <%= form_tag sessions_create_path, method: :post do %>
+                <div class="form-group email-group">
+                  <%= email_field_tag :email, nil, class: 'form-control', placeholder: t(".email"), required: true %>
+                </div>
+                <div class="form-group password-group">
+                  <%= password_field_tag :password, nil, class: 'form-control password-field',  placeholder: t(".password"), required: true %>
+                  <%= submit_tag t(".login_button") , class: 'red-standard-btn login-btn'%>
+                </div>
+
+                <div class="form-group links">
+                  <%= link_to t(".forgot_password"), new_reset_password_path %><br>
+                </div>
+                <!-- LOGIN with FACEBOOK -->
+                <div class="facebook btn-twitter">
+                  <%= link_to t(".login_with_facebook"), auth_at_provider_path(:provider => :twitter) %> <i class="fa fa-twitter fa-fw" style="color:white"></i>
+                </div>
+                <!-- LOGIN with TWITTER-->
+                <div class="twitter btn-facebook">
+                  <%= link_to t(".login_with_twitter"), auth_at_provider_path(:provider => :facebook) %> <i class="fa fa-facebook fa-fw" style="color:white"></i>
+                </div>
+              <% end %>
+            </div>
+          <!-- END LOGIN -->
+          <!-- SIGN UP -->
+            <div class="signup-header wow fadeInUp">
+              <h2 class="form-title text-center"><%=t(".new_to_navigating") %></h2>
+              <%= form_for @user, url: users_path do |f| %>
+                <div class="form-group" >
+                  <%= f.text_field :name, class: 'form-control', placeholder: t(".name"), required: true %>
+                </div>
+                <div class="form-group">
+                  <%= f.email_field :email, class: 'form-control', placeholder: t(".email"), required: true %>
+                </div>
+                <div class="form-group">
+                  <%= f.password_field :password, class: 'form-control', placeholder: t(".password"), required: true %>
+                </div>
+                <div class="form-group">
+                  <%= f.password_field :password_confirmation, class: 'form-control', placeholder: t(".password_confirmation"), required: true%>
+                </div>
+                <div class="form-group signup-group">
+                  <%= f.submit t(".sign_up"), class: 'red-standard-btn signup-btn'%>
+                 </div>
+            <% end %>
+            </div>
+          <!-- END SIGNUP -->
+      </div>
+    </div>
+    <!--<a href="#coming-soon" class="mouse-hover"><div class="mouse"></div></a>-->
+  </div>
+</div>
+<!-- End WELCOME TO NAVIGATING CANADA Section -->
+
+</div>

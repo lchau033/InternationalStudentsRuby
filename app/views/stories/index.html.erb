@@ -1,0 +1,28 @@
+<% stylesheet 'page_specific/blog' %>
+
+<div class="page-header">
+  <div id="profileTitle">
+    <h1 class="text-center"><%= t(".stories_title") %></h1>
+    <% if current_user.admin? %>
+        <div class="text-center">
+          <%= link_to t(".create_story"), new_story_path , class: 'btn red-standard-btn', style: 'margin-left: 50px'%>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<div id="columns">
+  <% @stories.each_with_index  do |story, index| %>
+      <figure>
+        <% if not story.image_url.nil? %>
+            <%=image_tag(story.image_url)%>
+        <% end %>
+        <h3><%= story.title %></h3>
+        <h6><%= story.created_at.strftime('%b %d, %Y') %></h6>
+        <figcaption><%= markdown(story.body.truncate(358)) %></figcaption>
+        <div class="text-center">
+          <%= link_to t(".read_more"), story_path(story) %>
+        </div>
+      </figure>
+  <% end %>
+</div>

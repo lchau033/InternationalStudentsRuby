@@ -1,0 +1,1 @@
+function clearForm(){var r=arguments[0];r.submit(),r.reset()}

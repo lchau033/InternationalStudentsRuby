@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigating Canada</title>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=600px">
+  <%= stylesheet_link_tag 'application', 'data-turbolinks-track': 'reload'%>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato:100,300,400,900', 'https://fonts.googleapis.com/css?family=Open+Sans', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+  <%= yield(:head_stylesheet) %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag('toastr.js') %>
+  <%= yield(:head_javascript) %>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-scroll">
+<%= include_gon %>
+
+
+<% flash.each do |key, value| %>
+    <script> toastr.<% concat key %>('<% concat value %>')</script>
+<% end %>
+
+<%= render :partial =>'pages/navbar', :formats=> [:html]%>
+
+<% if not current_user.nil? %>
+    <% if not current_user.admin %>
+      <%= render :partial =>'pages/chat_partial', :formats=> [:html]%>
+    <% end %>
+<% end %>
+
+<%= yield %>
+
+<!--<= render :partial =>'pages/footer', :formats=> [:html]%>-->
+
+<div data-role="page">
+  <%= javascript_include_tag('user.js') %>
+  <%= javascript_include_tag('chat.js') %>
+  <%= javascript_include_tag('my_chat.js') %>
+</div>
+</body>
+</html>
+

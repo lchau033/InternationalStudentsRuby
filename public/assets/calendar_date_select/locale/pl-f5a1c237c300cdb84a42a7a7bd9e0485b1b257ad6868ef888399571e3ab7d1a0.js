@@ -1,0 +1,1 @@
+Date.weekdays=$w("P W \u015a C P S N"),Date.months=$w("Stycze\u0144 Luty Marzec Kwiecie\u0144 Maj Czerwiec Lipiec Sierpie\u0144 Wrzesie\u0144 Pa\u017adziernik Listopad Grudzie\u0144"),Date.first_day_of_week=1,_translations={OK:"OK",Now:"Teraz",Clear:"Wyczy\u015b\u0107",Today:"Dzi\u015b"};

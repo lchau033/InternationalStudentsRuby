@@ -1,0 +1,1 @@
+Date.prototype.toFormattedString=function(t){return str=this.getFullYear()+"."+Date.padded2(this.getMonth()+1)+"."+Date.padded2(this.getDate()),t&&(str+=" "+this.getHours()+":"+this.getPaddedMinutes()),str};

@@ -1,0 +1,286 @@
+
+<body data-spy="scroll" data-target="#navbar-scroll">
+
+
+
+
+
+
+<!-- /.preloader -->
+<div id="preloader"></div>
+<div id="top"></div>
+
+<%= stylesheet_link_tag "home" %>
+
+
+<!-- NAVIGATION -->
+<div id="menu">
+  <nav class="navbar-wrapper navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand site-name" href="#top"><%= image_tag("logoNavCanWhite.png", :alt => "logo") %></a>
+      </div>
+
+      <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="#coming-soon">Coming Soon</a></li>
+          <li><a href="#our-goal">Our Goal</a></li>
+          <li><a href="#who-we-are">Who we are</a></li>
+          <li class="btn-trial"><a href="#contact-us">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<!-- /.parallax full screen background image -->
+<div class="banner">
+  <div class="bg-color">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+
+          <!-- /.main title -->
+          <div class="text-border">
+            <h1 class="wow fadeInLeft titleNavigatingToCanada">
+              Welcome to <br>
+              <span class="canada">Navigating Canada</span>
+              <div class="international">For International Students</div>
+            </h1>
+          </div>
+
+          <!-- /.header paragraph -->
+          <div class="landing-text wow fadeInUp">
+            <p>Navigating Canada is a web service hoping to facilitate the process for international students as well as new comers to Canada.
+              We are currently in the process of developing the service, although it will be up and running shortly!
+              Register to receive release updates as well as to help us better understand our target audience. </p>
+          </div>
+        </div>
+
+        <!-- /.signup form -->
+        <div class="col-md-5">
+          <div class="signup-header wow fadeInUp">
+            <h3 class="form-title text-center">GET STARTED</h3>
+            <%= form_for :user, :html => { :id => 'userform', :class=>:'form-header', :onsubmit=>'clearForm(this)'}, url: users_path do |f| %>
+              <div class="form-group">
+                <input class="form-control input-lg" name="user[name]" id="name" type="text" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control input-lg" name="user[country]" id="country" type="country" placeholder="Where are you from?" required>
+              </div>
+              <div class="form-group">
+                <input class="form-control input-lg" name="user[email]" id="email" type="email" placeholder="Email address" required>
+              </div>
+              <div class="form-group last">
+                <input type="submit" class="btn btn-warning btn-block btn-lg" value="SUBSCRIBE" id="btnsubmit">
+              </div>
+              <p class="privacy text-center">We will not share your email. </p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#coming-soon" class="mouse-hover"><div class="mouse"></div></a>
+  </div>
+</div>
+
+
+
+<!-- /.intro section -->
+<div id="coming-soon">
+<div id="intro">
+  <div class="container">
+    <div class="row">
+      <h1 align="center">Coming Soon</h1>
+      <div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title">
+
+        <!-- /.feature title -->
+        <h2>Progress Bar</h2>
+        <p>One of our highlighted feature is a Progress Bar which will allow the users to view their
+          progress as well as the pending and remaining tasks. The main items that we want to help you track
+          will be your application deadlines when it comes to your visa or your school enrollment. Additionnal
+          items can be tracked as well such as visa renewal, lease deadline, departure date, etc.
+        </p>
+        <!-- /.feature image -->
+        <div class="feature-img" align="center">
+          <%= image_tag("progress.jpg", :alt => "image", :class => "img-responsive") %>
+        </div>
+      </div>
+
+      <!-- /.intro image -->
+      <!--<div class="col-md-6 intro-pic wow slideInLeft">-->
+        <!--%= image_tag("progress.jpg", :alt => "image", :class => "img-responsive") %>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash; /.intro content &ndash;&gt;-->
+      <!--<div class="col-md-6 wow slideInRight">-->
+        <!--<h2>Progress Bar</h2>-->
+        <!--<p>One of our highlighted feature is a Progress Bar which will allow the users to view their-->
+          <!--progress as well as the pending and remaining tasks. The main items that we want to help you track-->
+          <!--will be your application deadlines when it comes to your visa or your school enrollment. Additionnal-->
+          <!--items can be tracked as well such as visa renewal, lease deadline, departure date, etc.-->
+        <!--</p>-->
+
+        <!--<div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /.feature section  CHAT-->
+<div id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title">
+
+        <!-- /.feature title -->
+        <h2>Chat </h2>
+        <p>We will be providing a chat feature to allow user to communicate with our representatives
+          for added assistance. We understand that sometimes you just want to ask someone your question instead of
+          looking for it everywhere, this feature will let you do just that while recieving an answer tailrored to
+          your exact situation.
+        </p>
+        <!-- /.feature image -->
+        <div class="feature-img" align="center">
+          <%= image_tag("chat.png", :alt => "image", :class => "img-responsive wow fadeInLeft") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /.feature 2 BLOG -->
+<div id="feature-2">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title">
+
+      <!-- /.feature title -->
+      <h2>Blog</h2>
+      <p>A Blog area will also be available to allow users to share their stories and experiences with other users.
+      Testimonials from actual users are very important to us and we would like to keep them public for other users
+      to receive insight whether it is on our service or their experiences in Canada. The Blog will also allow
+      us to improve based on your opinions. This feature is a Win-Win for both you and us.
+      </p>
+    <!-- /.feature image -->
+      <p><small>The following blog posts have been fabricated to serve as examples.</small></p>
+      <div class="feature-img" align="center">
+        <%= image_tag("blog.jpg", :alt => "blog", :class => "img-responsive") %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- /.download section -->
+<div id="our-goal">
+  <div class="action fullscreen parallax" style="background-image:url('assets/bg.jpg'); height: inherit;" data-img-width="2000" data-img-height="1333" data-diff="100">
+    <div class="overlay">
+      <div class="container">
+        <h2 class="wow fadeInLeft ourGoal" align="center">Our Goal</h2>
+        <p class="download-text wow fadeInLeft" align="center">Our goal is to get a better idea of the audiance attracted by our service.
+          This will allow us to offer a more tailored experience to our users. Our features are also meant to help the user
+          keep track of their tasks, help them whenever they need assistance as well as to offer them real stories written by real users.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Members -->
+<section id="faculity-member" class="section-padding who-we-are">
+  <div id="who-we-are">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2>Who we are</h2>
+          <div class="title-line wow fadeInRight"></div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <img src="" alt="" class="img-thumbnail img-circle" />
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name">Janet Audu</p>
+              <p class="pm-staff-profile-title">Title</p>
+              <p class="pm-staff-profile-bio"> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <img src="" alt="" class="img-thumbnail img-circle" />
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name">Jennifer Ngoc Chau Vo</p>
+              <p class="pm-staff-profile-title">Chief Operating Officer</p>
+              <p class="pm-staff-profile-bio"> 4th year engineering student in mechanical engineering, specializing in project management and entrepreneurship </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="price-footer text-center">
+            <a class="btn btn-price" href="mailto:jvo028@uottawa.ca">CONTACT NOW</a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="price-footer text-center">
+            <a class="btn btn-price" href="mailto:jvo028@uottawa.ca">CONTACT NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Members -->
+
+
+<!--Footer-->
+<footer id="footer" class="footer">
+  <div id="contact-us">
+  <div class="container text-center">
+
+    <h3>Questions or comments? Contact us and we'll get back to you right away!</h3>
+
+    <%= form_for :user, :html => { :id => 'userFormMessage', :class=>'mc-trial row', :onsubmit=>'clearForm(this)' }, url: users_path do |f| %>
+       <div class="form-wrapper col-md-12">
+         <div class="form-group col-md-4 col-md-offset-2 col-sm-4">
+           <input type="text" name="user[name]" id="Name" class="form-control wow fadeInUp" placeholder="Name" required/>
+         </div>
+         <div class="form-group col-md-4 col-sm-4">
+           <input type="email" name="user[email]" id="Email" class="form-control wow fadeInUp" placeholder="Email" required/>
+         </div>
+         <div class="form-group col-md-8 col-md-offset-2">
+           <textarea name="user[message]" rows="20" cols="20" id="Message" class="form-control input-message wow fadeInUp"  placeholder="Message" required></textarea>
+         </div>
+       </div>
+       <div class="form-group form-button col-md-2 col-md-offset-5">
+         <button onclick="submit" class="btn btn-block btn-submit"> Submit <i class="fa fa-arrow-right"></i></button>
+       </div>
+    <% end %>
+
+    <ul class="social-links">
+      <!--<li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>-->
+      <li><a href="https://www.facebook.com/navigatingcanada/" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+      <!--<li><a href="#link"><i class="fa fa-google-plus fa-fw"></i></a></li>-->
+      <!--<li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>-->
+    </ul>
+  </div>
+  </div>
+</footer>
+<!--/ Footer-->

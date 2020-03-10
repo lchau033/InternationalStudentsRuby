@@ -1,0 +1,4 @@
+$(document).ready(function() {
+    $('#post_<%= @downvote.post_id %> .downvote-icon').css('color', '#64b3df');
+    $("#post_<%= @downvote.post_id %> .score").html("<%= escape_javascript(render partial: "downvotes/score", locals: {post: @post}) %>");
+});

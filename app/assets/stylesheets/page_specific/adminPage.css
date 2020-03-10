@@ -1,0 +1,40 @@
+/***********************************
+Admin Page
+************************************/
+
+.admin_page{
+    margin-left: 3%;
+    padding: 20px;
+}
+#admin_button {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    height: 20%;
+    margin-top: -5px;
+
+}
+
+#delete_user_button{
+    height: 20%;
+    margin-top: -5px;
+
+}
+
+
+.table{
+    background-color: antiquewhite;
+    width: 98%;
+}
+
+
+
+table tr:hover {
+    background-color: #f5f5f5
+}
+
+
+
+
+
+

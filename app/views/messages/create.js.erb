@@ -1,0 +1,38 @@
+//Facebook like chat create.js
+//CREDITS: https://www.linkedin.com/pulse/facebook-like-chat-application-using-ruby-rails-kanhaiya-kumar?articleId=8194060515700978927
+
+// I changed the logic a little bit to allow the admin to speak with the user but
+// essentially the logic still comes from the credits all that I did is not get the chatbox when the user is an admin because the admin doesn't have a chatbox they have an actual page
+    var new_message = false;
+var sender_id = "sender_id";
+var reciever_id = "recipient_id" ;
+<% publish_to  "/conversations/"+@conversation.id.to_s do %>
+  var this_admin = "<%= @admin %>";
+  if(this_admin) {
+      var id = "<%= @conversation.id %>";
+      var chatbox = $( " .chatboxcontent");
+      sender_id = "<%= @message.user.id %>";
+      reciever_id = $('meta[name=user-id]').attr("content");
+
+      chatbox.append("<%= j render( partial: @message ) %>");
+      chatbox.scrollTop(chatbox[0].scrollHeight);
+  } else{
+      var id = "<%= @conversation.id %>";
+
+      var chatbox = $("#chatbox_" + id + " .chatboxcontent");
+      sender_id = "<%= @message.user.id %>";
+      reciever_id = "<%= @conversation.recipient_id %>";
+
+      chatbox.append("<%= j render( partial: @message ) %>");
+      chatbox.scrollTop(chatbox[0].scrollHeight);
+      if (sender_id == reciever_id) {
+          chatBox.chatWith(id);
+          chatbox.children().last().removeClass("self").addClass("other");
+          chatbox.scrollTop(chatbox[0].scrollHeight);
+          new_message = true;
+      }
+  }
+<% end %>
+
+// This publishes a message through the conversation channel
+// and adds it to the chat content part

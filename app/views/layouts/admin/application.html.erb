@@ -1,0 +1,47 @@
+<%#
+# Application Layout
+
+This view template is used as the layout
+for every page that Administrate generates.
+
+By default, it renders:
+- Sidebar for navigation
+- Content for a search bar
+  (if provided by a `content_for` block in a nested page)
+- Flashes
+- Links to stylesheets and Javascripts
+%>
+
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+  <meta charset="utf-8" />
+  <meta name="ROBOTS" content="NOODP" />
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=950px">
+  <title><%= content_for(:title) %> | <%= Rails.application.class.parent_name.titlecase %></title>
+  <%= stylesheet_link_tag 'admin', 'data-turbolinks-track': 'reload'%>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato:300,400,900', 'https://fonts.googleapis.com/css?family=Open+Sans', 'data-turbolinks-track': 'reload' %>
+  <%= render "stylesheet" %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render :partial =>'pages/navbar', :formats=> [:html]%>
+<% flash.each do |key, value| %>
+    <script> toastr.<% concat key %>('<% concat value %>')</script>
+<% end %>
+  <div class="app-container">
+    <div class="sidebar">
+      <%= render "sidebar" -%>
+    </div>
+    <main class="main-content" role="main">
+      <%= content_for(:search) %>
+      <%= yield %>
+    </main>
+  </div>
+
+  <%= render "javascript" %>
+</body>
+</html>

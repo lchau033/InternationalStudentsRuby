@@ -1,0 +1,84 @@
+<% stylesheet 'page_specific/country_select' %>
+<% stylesheet 'page_specific/profile' %>
+<%= javascript_include_tag('calendar_date_select/') %>
+
+
+<div class="container" xmlns="http://www.w3.org/1999/html">
+  <div class="page-header">
+    <h1 class="form-title text-center"><%= t(".update_profile_title") %></h1>
+  </div>
+  <div class="edit-profile">
+    <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+            <%@user.errors.full_messages.each do |message| %>
+             <script> toastr.error('<%= message %>');</script>
+            <% end %>
+        <% end %>
+        <div class="form-group col-md-6 col-sm-offset-3" >
+          <%= f.label t(".name") %>
+          <%= f.text_field :name, class: 'form-control',  required: true %>
+        </div>
+        <div class="form-group col-md-6 col-sm-offset-3">
+          <%= f.label t(".email") %>
+          <%= f.email_field :email, class: 'form-control', required: true %>
+        </div>
+        <div class="form-group col-md-6 col-sm-offset-3">
+          <%= f.label t(".country") %>
+          <%= f.country_select :country, {selected: @user.country}, {class: 'form-control turnintodropdown' }%>
+        </div>
+        <div class="form-group col-md-6 col-sm-offset-3" >
+          <%= f.label t(".province") %>
+          <select name="user[current_province]" id="user_current_province" class="form-control" required="false">
+            <option><%= t '.alberta' %></option>
+            <option><%= t '.british_columbia' %></option>
+            <option><%= t '.manitoba' %></option>
+            <option><%= t '.new_brunswick' %></option>
+            <option><%= t '.newfoundland_and_labrador' %></option>
+            <option><%= t '.nova_scotia' %></option>
+            <option><%= t '.ontario' %></option>
+            <option><%= t '.prince_edward_island' %></option>
+            <option><%= t '.quebec' %></option>
+            <option><%= t '.saskatchewan' %></option>
+            <option><%= t '.nothwest_territories' %></option>
+            <option><%= t '.nunavut' %></option>
+            <option><%= t '.yukon' %></option>
+          </select>
+        </div>
+        <div class="form-group col-md-6 col-sm-offset-3" >
+          <%= f.label t(".date_of_entry") %> </br>
+          <%= f.date_select :date_of_entry, :start_year => Date.current.year, :end_year => 1920,  :class => 'form-control' , required: false %>
+        </div>
+        <div class="form-group col-md-6 col-sm-offset-3">
+          <%= f.label t(".bio") %>
+          <%= f.text_area :bio, class: 'form-control',  required: false %>
+        </div>
+        <div class="form-group col-md-6 col-sm-offset-3">
+          <% if @user.image? %>
+              <%= image_tag @user.image.url %>
+              <%= f.label :remove_image %>
+              <%= f.check_box :remove_image %>
+          <% end %>
+          <div>
+            <div class="fileUpload btn blue-btn">
+              <%= f.label :image, id: "image-label" %>
+              <%= f.file_field :image, class: "upload", id: "image-button"%>
+            </div>
+            <div class="fileName" id="image-name"></div>
+          </div>
+          <div class="warning-file-size">*<%= t(".warningFileSize") %></div>
+
+        </div>
+        <div class="form-group col-md-4 col-sm-offset-4 button-group">
+          <%= link_to t(".cancel"), profile_path, class: "btn red-standard-btn cancel_btn"%>
+          <%= f.submit t(".update"), class: 'btn green-submit-btn update_btn' %>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+
+<script>
+    document.getElementById("image-label").innerHTML = "<%= t '.choose_file' %>";
+    document.getElementById("image-button").onchange = function () {
+      document.getElementById("image-name").innerHTML = this.files[0].name; };
+</script>

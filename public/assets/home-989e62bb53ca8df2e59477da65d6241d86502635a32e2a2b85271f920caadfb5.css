@@ -1,0 +1,107 @@
+.navbar-nav>li.btn-trial>a:focus, .navbar-nav>li.btn-trial>a:hover{
+    color: #9e9e9f !important;
+    border-color: #9e9e9f;
+}
+
+.navbar-nav>li>a {
+    text-shadow: none;
+}
+
+.navbar-nav {
+padding: 8px;
+}
+
+#coming-soon h1, .action h2.ourGoal, .who-we-are h2{
+    font-size: 55px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif
+}
+
+.who-we-are h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.titleNavigatingToCanada {
+    padding: 10px 20px 0 20px;
+    color: #f6f6f6;
+}
+
+.title-line {
+    margin-bottom: 60px;
+}
+
+.text-border {
+    margin: 100px 0 30px 0;
+}
+
+.banner h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.banner h1 .canada {
+    font-size: 55px;
+    font-weight: 600;
+}
+.banner h1 .international {
+    font-size: 25px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.landing-text {
+    color: #f6f6f6;
+    font-family: Lato, sans-serif;
+    font-weight: 200;
+}
+
+#our-goal {
+    height: 400px;
+}
+
+#our-goal .overlay {
+    height: inherit;
+    background-color: rgba(3, 0, 14, 0.65);
+}
+
+#our-goal h2 {
+    color: #f6f6f6;
+}
+
+.btn:hover .btn:focus {
+    color: #ffffff;
+}
+
+textarea {
+    resize: none;
+}
+
+#footer .form-control#Message {
+    padding-top:15px;
+    height: 150px;
+}
+
+.form-wrapper {
+    margin: 0 auto;
+}
+
+.form-button {
+    padding-top: 25px;
+}
+
+#footer h3{
+    font-family: Open Sans, sans-serif;
+    font-weight: 700;
+    color: #9e9e9f;
+}
+
+#our-goal .container
+{
+    padding-bottom:100px;
+}

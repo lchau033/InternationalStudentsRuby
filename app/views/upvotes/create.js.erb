@@ -1,0 +1,4 @@
+$(document).ready(function() {
+    $('#post_<%= @upvote.post_id %> .upvote-icon').css('color', '#f5a841');
+    $("#post_<%= @upvote.post_id %> .score").html("<%= escape_javascript(render partial: "upvotes/score", locals: {post: @post}) %>");
+});

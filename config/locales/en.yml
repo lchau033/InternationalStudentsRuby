@@ -1,0 +1,663 @@
+en:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: must be accepted
+      blank: can't be blank
+      confirmation: doesn't match %{attribute}
+      empty: can't be empty
+      equal_to: must be equal to %{count}
+      even: must be even
+      exclusion: is reserved
+      greater_than: must be greater than %{count}
+      greater_than_or_equal_to: must be greater than or equal to %{count}
+      inclusion: is not included in the list
+      invalid: is invalid
+      less_than: must be less than %{count}
+      less_than_or_equal_to: must be less than or equal to %{count}
+      not_an_integer: must be an integer
+      not_a_number: is not a number
+      odd: must be odd
+      other_than: must be other than %{count}
+      present: must be blank
+      record_invalid: 'Validation failed: %{errors}'
+      restrict_dependent_destroy:
+        one: Cannot delete record because a dependent %{record} exists
+        many: Cannot delete record because dependent %{record} exist
+      taken: has already been taken
+      too_long:
+        one: is too long (maximum is 1 character)
+        other: is too long (maximum is %{count} characters)
+      too_short:
+        one: is too short (minimum is 1 character)
+        other: is too short (minimum is %{count} characters)
+      wrong_length:
+        one: is the wrong length (should be 1 character)
+        other: is the wrong length (should be %{count} characters)
+      mini_magick_processing_error: "%{e}"
+    template:
+      body: 'There were problems with the following fields:'
+      header:
+        one: 1 error prohibited this %{model} from being saved
+        other: "%{count} errors prohibited this %{model} from being saved"
+  pages:
+    index:
+      welcome_to: Welcome to
+      navigating_canada: Navigating Canada
+      for_international_students: for international students
+      banner_message: Navigating Canada is a web service hoping to facilitate the process for international students as well as new comers to Canada. We are currently in the process of developing the service, although it will be up and running shortly! Register to receive release updates as well as to help us better understand our target audience.
+      signup:
+        get_started: Get Started
+        your_name: Your name
+        where_are_you_from: Where are you from?
+        email_address: Email address
+        subscribe: Subscribe
+        disclaimer: We will not share your email.
+      coming_soon:
+        title: Coming Soon
+        progress_bar: Progress Bar
+        progress_bar_desc: One of our highlighted feature is a Progress Bar which will allow the users to view their progress as well as the pending and remaining tasks. The main items that we want to help you track will be your application deadlines when it comes to your visa or your school enrollment. Additionnal items can be tracked as well such as visa renewal, lease deadline, departure date, etc.
+        featured_stories: Featured Stories
+        featured_stroies_desc: A Blog area will also be available to allow users to share their stories and experiences with other users. Testimonials from actual users are very important to us and we would like to keep them public for other users to receive insight whether it is on our service or their experiences in Canada. The Blog will also allow us to improve based on your opinions. This feature is a win-win for both you and us.
+      our_goal:
+        title: Our Goal
+        message: We are committed to helping international students and newcomers stay connected with one another and to services that help them as they navigate through Canada.
+      who_we_are:
+        title: Who We Are
+        janet:
+          name: Janet Audu
+          title: 
+          bio: Very Nigerian
+        jennifer:
+          name: Jennifer Ngoc Chau Vo
+          title: 
+          bio: Made in Vietnam, Produced in Canada
+        lia:
+          name: Lia Chauvel
+          title: Developer
+          bio: French with a Canadian twist
+        contact_now: Contact Now
+        celine:
+          bio: Frenglish Canadian
+          name: Céline Yelle
+          title: Developper
+        daniella:
+          bio: East African girl
+          name: Daniella Nayigihugu Kigari
+          title: 
+        samia:
+          bio: Global citizen
+          name: Samia Miftah-Idrissi
+          title: 
+        devteam: Development Team
+    profile:
+      profile_title: Profile
+    timeline:
+      timeline_title: Timeline
+    content:
+      content_title: What stage are you at?
+      prepare:
+        title: Plan on coming?
+        eligibility: Check your eligibility.
+        before_leaving: All you need to know before leaving home.
+        school: Find a school.
+        visa: Find a local visa application center.
+      adapt:
+        title: Just got here?
+        taxes: First year in Canada? Learn how to file your taxes.
+        work: Working as an International Student.
+      settling:
+        title: Still lost?
+        services: There are many newcomer services available that can help.
+      help_one: Can't find what you're looking for?
+      help_two: Send us an email at NavigatingCanada@gmail.com and we'll get back to you right away!
+      contact_help: 
+      contact_now: 
+    navbar:
+      coming_soon: Coming Soon
+      featured_stories: Featured Stories
+      login: Log In
+      logout: Log Out
+      our_goal: Our Goal
+      profile: Profile
+      signup: Sign Up
+      timeline: Timeline
+      who_we_are: Who We Are
+      contact_us: Contact Us
+      home: Home
+      language: Language
+      Home: 
+      Question Board: 
+      question_board: 
+    footer:
+      questions: Questions or comments? Contact us and we'll get back to you right away!
+      message: Message
+      name: Name
+      email: Email
+      submit: Submit
+      contact_us: Contact Us
+      our_goal: Our Goal
+      who_we_are: Who We Are
+    admin:
+      signup:
+        disclaimer: 
+        email_address: 
+        subscribe: 
+        where_are_you_from: 
+        your_name: 
+      submit: 
+    navbar_admin:
+      content: 
+      logout: 
+      profile: 
+      timeline: 
+    chat_partial:
+      start_chat: 
+  sessions:
+    log_in:
+      login_title: Login
+      email: Email
+      name: Name
+      password: Password
+      login_button: Login
+      password_confirmation: Password Confirmation
+      forgot_password: Forgot your password?
+      navigating_canada: NAVIGATING CANADA
+      sign_up: Sign Up
+      login_with_facebook: Login with
+      login_with_twitter: Login with
+      banner_message: A growing community for anyone new to Canada or simply just navigating Canada. This is a place where we all come together to help one another by sharing our experiences.
+      new_to_navigating: New to Navigating Canada, Sign Up!
+  users:
+    register:
+      signupTitle: Sign Up
+      name: Name
+      email: Email
+      password: Password
+      password_confirmation: Password Confirmation
+      country: Country of Origin
+      submit: Create Account
+      subscribe: Subscribe to our mailing list
+      province: 
+      our_goal:
+        message: 
+        title: 
+      who_we_are:
+        daniella:
+          name: 
+          bio: 
+        samia:
+          bio: 
+          name: 
+        celine:
+          bio: 
+          name: 
+        contact_now: 
+        devteam: 
+        janet:
+          bio: 
+          name: 
+        jennifer:
+          bio: 
+          name: 
+        lia:
+          bio: 
+          name: 
+        title: 
+      contact_us: 
+    profile_edit:
+      update_profile_title: Update Profile
+      name: Name
+      choose_file: Choose File
+      email: Email
+      country: Country of Origin
+      bio: Bio
+      warningFileSize: Please make sure the file size does not exceed 500KB.
+      image: Profile Picture
+      update: Update
+      view_profile: 
+      cancel: 
+      province: Canadian Province
+      date_of_entry: Date of entry
+      alberta: Alberta
+      british_columbia: British Columbia
+      manitoba: Manitoba
+      new_brunswick: New Brunswick
+      newfoundland_and_labrador: Newfoundland and Labrador
+      nova_scotia: Nova Scotia
+      ontario: Ontario
+      prince_edward_island: Prince Edward Island
+      quebec: Quebec
+      saskatchewan: Saskatchewan
+      nunavut: Nunavut
+      yukon: Yukon
+      nothwest_territories: Northwest Territories
+    profile_show:
+      profile_title: Profile
+      bio: Bio
+      country: Country of Origin
+      province: Canadian Province
+      email: Email
+      name: Name
+      edit_profile: Edit Profile
+    show:
+      dateOfEntry: 
+      province: 
+  thredded:
+    shared:
+      nav:
+        _standalone:
+          title: Blog
+        standalone:
+          title: 
+    topics:
+      flag: 
+  reset_passwords:
+    new:
+      email: Email
+      send_reset: Send reset password email
+      title: Reset Password
+    edit:
+      password: Password
+      password_confirmation: Password Confirmation
+      set_password: Set password
+      title: Choose a new password
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: about 1 hour
+        other: about %{count} hours
+      about_x_months:
+        one: about 1 month
+        other: about %{count} months
+      about_x_years:
+        one: about 1 year
+        other: about %{count} years
+      almost_x_years:
+        one: almost 1 year
+        other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_minutes:
+        one: less than a minute
+        other: less than %{count} minutes
+      less_than_x_seconds:
+        one: less than 1 second
+        other: less than %{count} seconds
+      over_x_years:
+        one: over 1 year
+        other: over %{count} years
+      x_days:
+        one: 1 day
+        other: "%{count} days"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_months:
+        one: 1 month
+        other: "%{count} months"
+      x_seconds:
+        one: 1 second
+        other: "%{count} seconds"
+    prompts:
+      day: Day
+      hour: Hour
+      minute: Minute
+      month: Month
+      second: Seconds
+      year: Year
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+      user:
+        create: Create User
+        update: Update User
+      mailing_list:
+        update: Update Mailing lists
+      story:
+        create: Create Story
+    label:
+      user:
+        name: name
+        password: 
+        password_confirmation: 
+        email: email
+        admin: admin
+        created_at: created_at
+        crypted_password: Crypted Password
+        id: id
+        salt: Salt
+        updated_at: Updated At
+        signed_in: Signed In
+        image: 
+        remove_image: 
+        country: country
+        Name: 
+        Confirmation de Mot de Passe: 
+        Courriel: 
+        Nom: 
+        Pays: 
+        bio: 
+        Profile Picture: 
+        Photo: 
+        Please make sure the file size does not exceed 500mb: 
+        Please make sure the file size does not exceed 500KB: 
+        Subscribe to our mailing list: 
+        Current province: 
+        Province actuelle: 
+        '<span class="translation_missing localeapp" title="translation missing: en':
+          users:
+            register:
+              province">Province</span>: 
+            profile_edit:
+              province">Province</span>: 
+              date_of_entry">Date Of Entry</span>: 
+          sessions:
+            log_in:
+              country">Country</span>: 
+              name">Name</span>: 
+              password_confirmation">Password Confirmation</span>: 
+        Province: 
+        Date d'entrée: 
+        '<span class="translation_missing localeapp" title="translation missing: fr':
+          users:
+            profile_edit:
+              date_of_entry">Date Of Entry</span>: 
+        Canadian Province: 
+        Country of Origin: 
+      mailing_list:
+        country: country
+        email: email
+        id: id
+        name: name
+        message: Message
+      Please make sure the file size does not exceed 500KB:
+        '{:class=>"file-size-warning"}': 
+      messageboard:
+        Description: 
+        Messageboard group: 
+        Name: 
+      story:
+        content: 
+        image: 
+        title: 
+        Body: 
+        Title: 
+        '<span class="translation_missing localeapp" title="translation missing: en':
+          stories:
+            edit:
+              body">Body</span>: 
+              title">Title</span>: 
+        Texte: 
+        Titre: 
+    placeholder:
+      article:
+        content: 
+        gplus_url: 
+        sub_title: 
+        teaser: 
+        title: 
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: Billion
+          million: Million
+          quadrillion: Quadrillion
+          thousand: Thousand
+          trillion: Trillion
+      format:
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        format: "%n%"
+  support:
+    array:
+      last_word_connector: ", and "
+      two_words_connector: " and "
+      words_connector: ", "
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm
+  activerecord:
+    attributes:
+      user:
+        email: Email
+        name: Name
+        password: Password
+        password_confirmation: Password confirmation
+        admin: Admin
+        country: Country
+        created_at: Created at
+        crypted_password: Crypted password
+        id: Id
+        salt: Salt
+        updated_at: Updated at
+        image: Image
+        remove_image: Remove image
+        Name: Name
+        Confirmation de Mot de Passe: 
+        Courriel: 
+        Nom: 
+        Pays: 
+        bio: 
+        Photo: 
+        Please make sure the file size does not exceed 500mb: Please make sure the file size does not exceed 500mb
+        Please make sure the file size does not exceed 500KB: Please make sure the file size does not exceed 500kb
+        Subscribe to our mailing list: Subscribe to our mailing list
+        Current province: Current province
+        Province actuelle: 
+        Province: Province
+        Date of entry: Date of entry
+        Date d'entrée: 
+        Canadian Province: Canadian province
+        Country of Origin: Country of origin
+      conversation:
+        sender_id: Sender
+      mailing_list:
+        country: Country
+        created_at: Created at
+        email: Email
+        id: Id
+        message: Message
+        name: Name
+        updated_at: Updated at
+      'user/<span class="translation_missing localeapp" title="translation missing: en/users/profile_edit':
+        bio">Bio</span>: 
+        province">Province</span>: Province">province</span>
+        date_of_entry">Date Of Entry</span>: Date of entry">date of entry</span>
+      thredded/messageboard:
+        Description: Description
+        Messageboard group: Messageboard group
+        Name: Name
+      story:
+        content: Content
+        image: Image
+        title: Title
+        body: Body
+        Body: Body
+        Title: Title
+        Texte: 
+        Titre: 
+      upvote:
+        post: Post
+        user: User
+      'user/<span class="translation_missing localeapp" title="translation missing: en/users/register':
+        province">Province</span>: Province">province</span>
+      downvote:
+        user: User
+        post: Post
+      'story/<span class="translation_missing localeapp" title="translation missing: en/stories/edit':
+        body">Body</span>: Body">body</span>
+        title">Title</span>: Title">title</span>
+      'user/<span class="translation_missing localeapp" title="translation missing: en/sessions/log_in':
+        country">Country</span>: Country">country</span>
+        name">Name</span>: Name">name</span>
+        password_confirmation">Password Confirmation</span>: Password confirmation">password confirmation</span>
+      'user/<span class="translation_missing localeapp" title="translation missing: fr/users/profile_edit':
+        date_of_entry">Date Of Entry</span>: 
+    models:
+      user: User
+      conversation: Conversation
+      mailing_list: Mailing lists
+      story: Story
+      upvote: Upvote
+      downvote: Downvote
+    errors:
+      models:
+        commontator/comment:
+          attributes:
+            body:
+              taken: is a duplicate of another comment.
+  admin:
+    actions:
+      show_in_app:
+        title: 
+    help:
+      user:
+        admin: 
+        crypted_password: 'Optional. '
+        email: 'Optional. '
+        name: 'Optional. '
+        salt: 'Optional. '
+    application:
+      sidebar:
+        content: 
+        logout: 
+        profile: 
+        timeline: 
+  prepare:
+    visa: 
+  messageboard:
+    questions_and_answers_counts: "%{topics_count} questions / %{posts_count} answers"
+  stories:
+    form:
+      title: Title
+      body: Body
+      cancel: Cancel
+      create_story: Create a new story
+      warningFileSize: Please make sure the file size does not exceed 500KB.
+      submit: 
+      choose_file: Choose File
+    index:
+      stories_title: Featured Stories
+      read_more: READ MORE
+      create_story: Create a new story
+      blog_title: 
+    new:
+      create_story: Create a new story
+    show:
+      update_story: Edit this story
+    edit:
+      title: Title
+      body: Body
+      cancel: Cancel
+      update_story: Update
+      warningFileSize: Please make sure the file size does not exceed 500KB.
+      edit_story: Edit Story
+      create_story: 
+      choose_file: Choose File
+  simple_form:
+    hints:
+      story:
+        new:
+          body: 
+          title: 
+    labels:
+      story:
+        new:
+          body: 
+          title: 
+          image: 
+    placeholders:
+      story:
+        new:
+          title: 

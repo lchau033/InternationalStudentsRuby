@@ -1,0 +1,19 @@
+<!--Facebook like chat _message.html.erb-->
+<!--CREDITS: https://www.linkedin.com/pulse/facebook-like-chat-application-using-ruby-rails-kanhaiya-kumar?articleId=8194060515700978927-->
+
+
+<li class="<%=  self_or_other(message) %>">
+  <div class="avatar">
+    <div class="">
+    <span class="initials">
+      <%= message.user.name.chr.upcase %>
+    </span>
+    </div>
+  </div>
+  <div class="chatboxmessagecontent">
+    <p><%= message.body %></p>
+    <time datetime="<%= message.created_at %>" title="<%= message.created_at.strftime("%d %b  %Y at %I:%M%p") %>">
+      <%= message_interlocutor(message).name %> • <%= message.created_at.strftime("%H:%M %p") %>
+    </time>
+  </div>
+</li>

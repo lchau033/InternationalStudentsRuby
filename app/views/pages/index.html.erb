@@ -1,0 +1,183 @@
+<% stylesheet 'page_specific/index' %>
+
+<!-- WELCOME TO NAVIGATING CANADA Section (initial slider) -->
+<!-- full screen banner with passport picture -->
+<div class="banner">
+  <div class="bg-color">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="title-container">
+          <!-- main title -->
+            <h1 class="wow fadeInLeft titleNavigatingToCanada">
+              <div class="square"></div>
+              <span class="welcome"><%=t '.welcome_to' %></span>
+              <div class="square"></div>
+              <br>
+              <span class="canada"><%= t '.navigating_canada' %></span>
+              <div class="international"><%=t '.for_international_students' %></div>
+            </h1>
+
+            <!-- header paragraph -->
+            <div class="landing-text wow fadeInUp">
+              <p><%=t '.banner_message' %></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- signup form -->
+        <div class="col-md-5 col-md-offset-1">
+          <div class="signup-header wow fadeInUp">
+            <h3 class="form-title text-center"><%=t '.signup.get_started' %></h3>
+            <%= form_for :user, :html => { :id => 'userform', :class=>:'form-header', :onsubmit=>'clearForm(this); toastr.info("You\'ve been added to our mailing list");'}, url: mailing_lists_path do |f| %>
+                <div class="form-group">
+                  <input class="form-control input-lg" name="user[name]" id="name" type="text" placeholder="<%=t '.signup.your_name' %>" required>
+                </div>
+                <div class="form-group">
+                  <input class="form-control input-lg" name="user[country]" id="country" type="country" placeholder="<%=t '.signup.where_are_you_from' %>" required>
+                </div>
+                <div class="form-group">
+                  <input class="form-control input-lg" name="user[email]" id="email" type="email" placeholder=<%=t '.signup.email_address' %> required>
+                </div>
+                <div class="form-group last">
+                  <input type="submit" class="btn btn-block btn-lg" value="<%=t '.signup.subscribe' %>" id="btnsubmit">
+                </div>
+                <p class="privacy text-center"><%=t '.signup.disclaimer' %></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<a href="#coming-soon" class="mouse-hover"><div class="mouse"></div></a>-->
+  </div>
+</div>
+<!-- End WELCOME TO NAVIGATING CANADA Section -->
+
+
+
+
+<!-- OUR GOAL section -->
+<div id="our-goal">
+  <div class="action fullscreen parallax" style="background-image:url('assets/bg.jpg'); height: inherit;" data-img-width="2000" data-img-height="1333" data-diff="100">
+    <div class="overlay">
+      <div class="container">
+        <h2 class="wow fadeInLeft ourGoal" align="center"><%=t '.our_goal.title' %></h2>
+        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
+          <p class="goal-message wow fadeInLeft" align="center"><%=t '.our_goal.message' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End OUR GOAL section -->
+
+
+<!-- WHO WE ARE Section-->
+<section id="faculity-member" class="section-padding who-we-are">
+  <div id="who-we-are">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center">
+          <h2><%=t '.who_we_are.title' %></h2>
+          <div class="title-line wow fadeInRight"></div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <%= image_tag("janet.png", :alt => "image", :class => "img-thumbnail img-circle") %>
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name"><%=t '.who_we_are.janet.name' %></p>
+              <p class="pm-staff-profile-bio">"<%=t '.who_we_are.janet.bio' %>"</p>
+              <div class="price-footer text-center">
+                <a class="btn btn-price" href="mailto:navigatingcanada@gmail.com"><%=t '.who_we_are.contact_now' %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <%= image_tag("jen.png", :alt => "image", :class => "img-thumbnail img-circle") %>
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name"><%=t '.who_we_are.jennifer.name' %></p>
+              <p class="pm-staff-profile-bio">"<%=t '.who_we_are.jennifer.bio' %>"</p>
+              <div class="price-footer text-center">
+                <a class="btn btn-price" href="mailto:navigatingcanada@gmail.com"><%=t '.who_we_are.contact_now' %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="header-section dev-header-section text-center">
+          <h3><%=t '.who_we_are.devteam' %></h3>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <%= image_tag("Lia.jpg", :alt => "image", :class => "img-thumbnail img-circle") %>
+
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name"><span><%=t '.who_we_are.lia.name' %></span></p>
+              <p class="pm-staff-profile-bio"><span>"<%=t '.who_we_are.lia.bio' %>"</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <%= image_tag("celine.jpg", :alt => "image", :class => "img-thumbnail img-circle") %>
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name"><span><%=t '.who_we_are.celine.name' %></span></p>
+              <p class="pm-staff-profile-bio"><span>"<%=t '.who_we_are.celine.bio' %>"</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <%= image_tag("daniella.jpg", :alt => "image", :class => "img-thumbnail img-circle") %>
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name"><span><%=t '.who_we_are.daniella.name' %></span></p>
+              <p class="pm-staff-profile-bio"><span>"<%=t '.who_we_are.daniella.bio' %>"</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="pm-staff-profile-container" >
+            <div class="pm-staff-profile-image-wrapper text-center">
+              <div class="pm-staff-profile-image">
+                <%= image_tag("samia.jpg", :alt => "image", :class => "img-thumbnail img-circle") %>
+
+              </div>
+            </div>
+            <div class="pm-staff-profile-details text-center">
+              <p class="pm-staff-profile-name"><span><%=t '.who_we_are.samia.name' %></span></p>
+              <p class="pm-staff-profile-bio"><span>"<%=t '.who_we_are.samia.bio' %>"</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End WHO WE ARE Section -->
